@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'pry'
+
 
 Destination.destroy_all
 Blogger.destroy_all
@@ -30,7 +30,7 @@ end
     Post.create({
       title: Faker::Hipster.sentence(3),
       content: Faker::Hipster.paragraphs(4),
-      likes: 0,
+      likes: (13..100).to_a.sample,
       blogger: blogger,
       destination: Destination.all.sample
     })
@@ -38,6 +38,3 @@ end
 end
 
 
-binding.pry
-
-puts "binding"

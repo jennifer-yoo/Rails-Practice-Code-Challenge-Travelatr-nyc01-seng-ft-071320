@@ -1,10 +1,12 @@
-<h1>Bloggers#show</h1>
+<h1><%= @blogger.name %></h1>
 <p>
 <% @blogger.posts.each do |post| %>
 Title: <%= post.title %><br>
 Likes: <%= post.likes %> <br>
 <%end%>
-Most Liked: <%= @post.most_liked %>
+<% if @blogger.posts.count >= 1 %>
+Most Liked: <%= link_to @blogger.most_liked.title, post_path(@blogger.most_liked) %>
+<% end%>
 
 
 
