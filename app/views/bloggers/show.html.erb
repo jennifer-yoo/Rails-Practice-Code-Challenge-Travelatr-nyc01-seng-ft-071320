@@ -1,0 +1,11 @@
+<h1>Bloggers#show</h1>
+<p>
+<% @blogger.posts.each do |post| %>
+Title: <%= post.title %><br>
+Likes: <%= post.likes %> <br>
+<%end%>
+Most Liked: <%= @post.most_liked %>
+
+
+
+</p>

@@ -5,7 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'pry'
 
+Destination.destroy_all
+Blogger.destroy_all
+Post.destroy_all
 
 30.times do 
   Destination.create({
@@ -32,3 +36,8 @@ end
     })
   end
 end
+
+
+binding.pry
+
+puts "binding"
