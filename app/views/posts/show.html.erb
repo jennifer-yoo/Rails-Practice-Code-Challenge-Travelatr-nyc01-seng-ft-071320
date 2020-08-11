@@ -1,8 +1,8 @@
-<%= @post.title %><br>
-<%= @post.content %>
-
-<%= button_to "Like", post_path(@post), method: :put %>
-<%= @post.likes %>
-
+<h1><%= @post.title %></h1>
+<p> <%= @post.content %></p>
 <p>Written by: <%= link_to @post.blogger.name, blogger_path(@post.blogger)%></p>
 <p>Destination: <%= link_to @post.destination.name, destination_path(@post.destination) %></p>
+
+<%= button_to "Add Like", post_like_path(@post), method: :put %>
+<%= @post.likes %>
+
